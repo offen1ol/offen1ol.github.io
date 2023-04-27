@@ -1,0 +1,570 @@
+/* imports */
+
+@font-face {
+  font-family: "Morgy-Regular";
+  src: local("Morgy-Regular"), url("assets/fonts/Morgy-Regular.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: "Vigran Maroll";
+  src: local("Vigran Maroll"), url("assets/fonts/Vigran\ Maroll.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Wickery";
+  src: local("WICKERY"), url("assets/fonts/WICKERY.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Kawede-Regular";
+  src: local("Kawede-Regular"), url("assets/fonts/Kawede-Regular.ttf") format("truetype");
+}
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html {
+/* make a standardized size of px for font-size to later use rems */
+  font-size: 10px;
+}
+
+body {
+  background-color: #fbf7ea;
+  width: 100%;
+}
+
+/* colorss */
+body > div {
+  /*  left/right% top/bottom% */
+  background: 
+  radial-gradient(ellipse at 100% 0%, rgb(84, 139, 55), transparent 20%), 
+  radial-gradient(circle at 85% 7%, rgb(89, 220, 205), transparent 15%),
+  radial-gradient(circle at 0% 20%, rgb(229, 184, 85), transparent 15%), 
+  radial-gradient(circle at 95% 50%, rgb(143, 151, 253), transparent 15%),
+  radial-gradient(circle at 85% 55%, rgb(255, 147, 248), transparent 12%),
+  radial-gradient(ellipse at 0% 75%, rgb(238,	206,	212), transparent 25%),
+  radial-gradient(circle at 75% 100%, rgb(171, 128, 245), transparent 10%),
+  radial-gradient(ellipse at 100% 100%, rgb(123, 36, 38), transparent 15%);
+}
+
+body * {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+h1, h2 {
+  color: black;
+  font-family: "Wickery", Arial, Helvetica, sans-serif;
+  font-size: 6rem;
+  font-variant-ligatures: discretionary-ligatures;
+  text-transform: uppercase;
+  /* text-shadow: 5px 5px plum; */
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: "Kawede-Regular", Arial, Helvetica, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* header */
+
+body header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* nav */
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  padding: .7em 2.5%;
+}
+
+#socials {
+  justify-content: space-evenly;
+  gap: 10%;
+  flex-basis: 30%;
+  padding-right: 23%;
+}
+
+.logo {
+  width: 10%;
+}
+
+nav ul {
+  justify-content: flex-end;
+  flex-basis: 30%;
+  gap: 10%;
+}
+
+/* hero */
+
+main {
+  padding: 3% 0;
+}
+
+.hero-container > div {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-container section:first-child {
+  width: 20%;
+  margin: 5% 0 5% 10%;
+}
+
+h1 {
+  margin: 1% 0;
+}
+
+main span,
+main p {
+  padding-left: 3.5%;
+}
+
+/* about */
+
+#about {
+  justify-content: center;
+  align-items: center;
+  padding: 8% 0;
+}
+
+.about-container {
+  width: 80%;
+  padding: 5%;
+}
+
+.about-container h2 {
+  text-align: right;
+  margin-bottom: 3%;
+}
+
+#skills,
+#info {
+  padding: 2.5%;
+}
+
+#info p {
+  margin-bottom: 5%;
+}
+
+#skills {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+} 
+
+#skills > section {
+  width: 33.3333%;
+  text-align: center;
+  padding: 0 5% 5% 5%;
+}
+
+#skills span {
+  text-transform: uppercase;
+  font-family: "Kawede-Regular", Arial, Helvetica, sans-serif;
+}
+
+/* projects */
+
+#portfolio {
+  padding: 6% 0;
+}
+
+.portfolio-container {
+  padding: 5%;
+}
+
+.portfolio-container > h2 {
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.portfolio-container > div {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.project-links {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.project li {
+  margin-bottom: 5%;
+}
+
+/* contacts */
+
+#contact {
+  justify-content: center;
+  align-items: center;
+  padding: 8% 0;
+}
+
+.mobile-images {
+  display: none;
+}
+
+.contact-container .container {
+  flex-flow: row nowrap;
+}
+
+.contact-container {
+  padding: 5% 10%;
+  width: 80%;
+}
+
+.contact-container > h2 {
+  margin-bottom: 3%;
+}
+
+.contact-container section {
+  flex-basis: 50%;
+}
+
+.contact-container section + section {
+  padding: 0 0 5% 15%;
+}
+
+#contact img {
+  padding: 5%;
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+
+form > * {
+  margin-bottom: 1%;
+}
+
+input,
+textarea {
+  padding: .5em 1em;
+}
+
+#form-name,
+#form-email {
+  width: 50%;
+}
+
+#form-subject {
+  width: 75%;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+button {
+  width: fit-content;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/* navbar */
+
+nav {
+  background-color: #fbf7ea;
+  background: linear-gradient(180deg, #fbf7ea, transparent);
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+/* hero & portfolio background */
+
+.hero-container,
+.portfolio-container {
+  background: repeating-linear-gradient(90deg, transparent 0, rgba(255, 255, 255, 0.1), rgba(159, 159, 159, 0.1), rgba(73, 73, 73, 0.1) 100px);
+  border-radius: 32px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.2px);
+  -webkit-backdrop-filter: blur(9.2px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* about & contact background */
+
+.about-container,
+.contact-container {
+  border-radius: 32px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.2px);
+  -webkit-backdrop-filter: blur(9.2px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* about */
+
+.about-container {
+  background: linear-gradient(90deg, transparent 50%, white);
+  border-left: none;
+}
+
+/* projects */
+
+.teaser {
+  height: 300px;
+  width: 300px;
+  background-color: #fbf7ea;
+  background: linear-gradient(180deg, rgb(149, 183, 203), #fbf7ea);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin-left: 3%;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  border-top: none;
+  border-bottom: none;
+  border-top-right-radius: 48%;
+  border-top-left-radius: 48%;
+}
+
+.project a {
+  border: 1px solid black;
+  border-radius: 16px;
+  padding: 5% 15%;
+}
+
+/* eh...? might delete this section below */
+/* .message {
+  position: absolute;
+  top: 50%;
+
+  text-align: center;
+  display: none;
+  font-family: "Kawede-Regular";
+  font-size: 20px;
+  color: #fbf7ea;
+}
+
+.first {
+  left: 18%;
+}
+
+.second {
+  left: 45%;
+}
+
+.third {
+  left: 73%;
+}
+
+.teaser:hover .message {
+  display: block;
+} */
+
+/* contact */
+
+.contact-container{
+  background: linear-gradient(270deg, transparent 50%, white);
+  border-right: none;
+}
+
+form > * {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 16px;
+}
+
+/* pseudos details */
+
+a:hover {
+  color: #fff;
+}
+
+#portfolio a:hover,
+button:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  /* text-shadow: 2px 1px rgba(73, 73, 73, 0.3); */
+}
+
+input::placeholder,
+textarea::placeholder,
+button {
+  font-family: "Kawede-Regular";
+}
+
+input:focus,
+textarea:focus {
+  background-color: #fff;
+}
+
+/* responsive */
+
+body .mobile-icons {
+  display: none
+}
+
+@media (max-width: 450px) {
+  /* basic styles */
+
+  /* colorss */
+
+  body > div {
+    /*  left/right% top/bottom% */
+    background: 
+    radial-gradient(ellipse at 100% 0%, rgb(84, 139, 55), transparent 17%), 
+    radial-gradient(circle at 85% 7%, rgb(89, 220, 205), transparent 7%),
+    radial-gradient(circle at 0% 20%, rgb(229, 184, 85), transparent 13%), 
+    radial-gradient(circle at 95% 40%, rgb(143, 151, 253), transparent 15%),
+    radial-gradient(circle at 80% 50%, rgb(255, 147, 248), transparent 10%),
+    radial-gradient(ellipse at 0% 70%, rgb(238,	206,	212), transparent 20%),
+    radial-gradient(circle at 75% 100%, rgb(171, 128, 245), transparent 5%),
+    radial-gradient(ellipse at 100% 100%, rgb(123, 36, 38), transparent 10%);
+  } 
+  
+  h1, 
+  h2 {
+    font-size: 3rem;
+  }
+
+  h2 { 
+    padding: 5% 0 7% 0;
+  }
+
+  /* nav */
+
+  body .mobile-icons {
+    display: flex;
+    font-size: 35px;
+  }
+
+  nav .container {
+    display: none;
+  }
+
+  #socials {
+    display: none;
+  }
+
+  .logo {
+    width: 25%;
+  }
+
+  /* hero */
+
+  main {
+    padding: 10% 0;
+  }  
+  
+  .hero-container,
+  .portfolio-container {
+    padding: 10% 0;
+    background: repeating-linear-gradient(90deg, transparent 0, rgba(255, 255, 255, 0.1), rgba(159, 159, 159, 0.1), rgba(73, 73, 73, 0.1) 50px);
+  }
+
+  /* about */
+
+  .about-container > .container {
+    flex-flow: column-reverse nowrap;
+  }
+
+  /* projects */
+
+  #portfolio .container > section {
+    margin-bottom: 10%;
+  }
+  
+  .portfolio-container > .container {
+    flex-flow: column nowrap;
+  }
+  /* contact */
+
+  .contact-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .contact-container > h2 {
+    flex-basis: 50%;
+
+  }
+
+  .contact-container > .mobile-images {
+    display: block;
+    flex-basis: 30%;
+    margin: 0 0 5% 9%;
+  }
+
+  .contact-container section {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+  }
+
+  .contact-container section + section {
+    display: none;
+  }
+
+  #form-name,
+  #form-email,
+  #form-subject {
+    width: 100%;
+  }
+
+  /* additional styles */
+  
+  .about-container,
+  .contact-container {
+    background: linear-gradient(0deg, transparent 50%, white);
+    border-radius: 32px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.2px);
+    -webkit-backdrop-filter: blur(9.2px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+  }
+}
+
+
