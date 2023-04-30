@@ -304,7 +304,7 @@ button {
   width: fit-content;
   cursor: pointer;
   font-size: 16px;
-  padding: 5px;
+  padding: 1%;
 }
 
 /******************************************
@@ -371,7 +371,7 @@ nav {
 
 .project a {
   border: 1px solid black;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   padding: 5% 15%;
 }
 
@@ -413,7 +413,7 @@ nav {
 form > * {
   background-color: transparent;
   border: 1px solid black;
-  border-radius: 16px;
+  border-radius: 1.6rem;
 }
 
 /* pseudos details */
@@ -422,7 +422,7 @@ a:hover {
   color: #fff;
 }
 
-#portfolio a:hover,
+.project-links a:hover,
 button:hover {
   color: #fff;
   border: 1px solid #fff;
@@ -440,14 +440,18 @@ textarea:focus {
   background-color: #fff;
 }
 
-/* responsive */
+/* /******************************************
+/* RESPONSIVE
+/*******************************************/ */
 
 body .mobile-icons {
   display: none
 }
 
 @media (max-width: 450px) {
-  /* basic styles */
+  /******************************************
+  /* BASE STYLES
+  /*******************************************/
 
   /* colorss */
 
@@ -510,6 +514,12 @@ body .mobile-icons {
     flex-flow: column-reverse nowrap;
   }
 
+  #skills > section {
+    width: 33.3333%;
+    text-align: center;
+    padding: 0 0 7% 0;
+  }
+
   /* projects */
 
   #portfolio .container > section {
@@ -519,6 +529,16 @@ body .mobile-icons {
   .portfolio-container > .container {
     flex-flow: column nowrap;
   }
+
+  .project-links {
+    margin: 10% 0 5% 0;
+  }
+
+  .project a {
+    border-radius: 2.5rem;
+    padding: 15%;
+  }
+
   /* contact */
 
   .contact-container {
@@ -529,7 +549,6 @@ body .mobile-icons {
 
   .contact-container > h2 {
     flex-basis: 50%;
-
   }
 
   .contact-container > .mobile-images {
@@ -540,17 +559,31 @@ body .mobile-icons {
 
   .contact-container section {
     flex-basis: 100%;
-    flex-wrap: wrap;
   }
 
   .contact-container section + section {
     display: none;
   }
 
+  form > * {
+    margin-bottom: 4%;
+    padding: 5%;
+    border-radius: 2.5rem;
+    /* width: 100%; */
+  }
+
   #form-name,
   #form-email,
   #form-subject {
     width: 100%;
+  }
+
+  button {
+    padding: 3% 2%;
+  }
+
+  form + a {
+    padding-bottom: 7%;
   }
 
   /* additional styles */
@@ -565,6 +598,20 @@ body .mobile-icons {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: none;
   }
+
+  /* pseudos details */
+
+  a:active {
+    color: #fff;
+  }
+
+  .project-links a:active,
+  button:active {
+    color: #fff;
+    border: 1px solid #fff;
+    /* text-shadow: 2px 1px rgba(73, 73, 73, 0.3); */
+  }
 }
+
 
 
