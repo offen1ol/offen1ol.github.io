@@ -440,11 +440,11 @@ textarea:focus {
   background-color: #fff;
 }
 
-/* /******************************************
+/******************************************
 /* RESPONSIVE
-/*******************************************/ */
+/*******************************************/
 
-body .mobile-icons {
+html body .mobile-icons {
   display: none
 }
 
@@ -479,7 +479,7 @@ body .mobile-icons {
 
   /* nav */
 
-  body .mobile-icons {
+  html body .mobile-icons {
     display: flex;
     font-size: 35px;
   }
