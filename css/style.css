@@ -523,9 +523,8 @@ textarea:focus {
     padding: 5% 0;
   }  
 
-  .hero-container,
-  .portfolio-container {
-    padding: 10% 0;
+  .hero-container {
+    padding: 25% 0;
   }
 
   .hero-container section:first-child {
@@ -533,54 +532,53 @@ textarea:focus {
     margin: 5% 0 10% 5%;
   }
 
+  /* about */
+
+  #about {
+    padding: 10% 0;
+  }
+
   /* projects */
+
+  #portfolio .container > section {
+    /* margin-bottom: 10%; */
+    width: 100%;
+  }
+
+  .portfolio-container {
+    padding: 5% 0;
+  }
     
   .portfolio-container > .container {
     display: block;
   }
-
+  
   .project {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
-    margin: 5% 0;
+    padding: 5% 0;
   }
 
-  .project > section:last-child{
-    flex-basis: 50%;
-  }
-
-  #project2, 
-  #project2 ul {
-    flex-flow: row-reverse nowrap;
-  }
-
-  .project ul {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: 15%;
-    height: 100%;
-  }
-
-  .teaser {
-    height: 200px;
-    width: 25%;
-    margin: 0;
-  }
+    .project > * {
+      width: 50%;
+    }
   
-  .project-links {
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-    gap: 0;
-  }
+    .teaser {
+      height: 325px;
+      width: 45%;
+      margin: 2.5%;
+    }
+
+    .teaser + section {
+      padding: 2.5%;
+    }
   
-  .project a {
-    border-radius: 2.5rem;
-    padding: 15%;
-  }
+    .project-links {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      /* gap: 15%; */
+    }
 
   /* contact */
 
@@ -636,11 +634,6 @@ textarea:focus {
 @media (max-width: 650px) {
 
   /* projects */
-
-  #project2,
-  #project2 ul {
-    flex-flow: row nowrap;
-  }
 
   .teaser {
     height: 250px;
@@ -729,6 +722,10 @@ textarea:focus {
     padding: 10% 0;
   }
 
+  .hero-container {
+    padding: 35% 0;
+  }
+
   /* projects */
 
   #portfolio .container > section {
@@ -745,6 +742,10 @@ textarea:focus {
     display: block;
   }
 
+  .project > * {
+    width: 100%;
+  }
+
   .teaser {
     height: 300px;
     width: 80%;
@@ -752,14 +753,13 @@ textarea:focus {
   }
 
   .project ul {
-    display: block;
+    /* display: block; */
   }
 
   .project-links {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
-    gap: 15%;
+    justify-content: space-between;
   }
 
   /* additional styles */
@@ -795,7 +795,7 @@ textarea:focus {
   }
 
   .hero-container {
-    padding: 20% 0;
+    padding: 50% 0;
   }
 
   /* about & contact width */
