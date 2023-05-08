@@ -785,10 +785,6 @@ textarea:focus {
     margin: 0 auto;
   }
 
-  .project ul {
-    /* display: block; */
-  }
-
   .project-links {
     display: flex;
     flex-flow: row nowrap;
